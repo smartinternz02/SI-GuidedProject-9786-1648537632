@@ -1,0 +1,91 @@
+
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CKD Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    </head>
+ <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Chronic Kidney Disease</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+<style>
+    select {
+    text-indent: 29%;
+    text-align: center;
+	width: 350px;
+	height: 25px;
+	margin-bottom: 5px;
+    }
+     
+</style>
+                
+
+<select id="red_blood_cells" name="red_blood_cells">
+<option value="">Select red_blood_cells present or not</option>
+    <option value="1">normal</option>
+    <option value="0">abnormal</option>
+  </select><br>
+  
+<select id="pus_cell" name="pus_cell">
+<option value="">Select pus_cell or not</option>
+    <option value="0">normal</option>
+    <option value="1">abnormal</option>
+  </select><br>
+  
+  
+<input class="form-input" type="text" name="blood_glucose_random" placeholder="Enter the blood glucose random"><br>
+
+<input class="form-input" type="text" name="blood_urea" placeholder="Enter the blood urea"><br>
+
+<select id="pedal_edema" name="pedal_edema">
+  <option value="">Select pedal_edema present or not</option>
+    <option value="1">yes</option>
+    <option value="0">no</option>
+  </select><br>
+  
+<select id="anaemia" name="anaemia">
+  <option value="">Select anaemia present or not</option>
+    <option value="1">yes</option>
+    <option value="0">no</option>
+  </select><br>
+  
+<select id="diabetes_mellitus" name="diabetes_mellitus">
+  <option value="">Select diabetes_mellitus present or not</option>
+    <option value="1">yes</option>
+    <option value="0">no</option>
+  </select><br>
+  
+<select id="coronary_artery_disease" name="coronary_artery_disease">
+  <option value="">Select coronary_artery_disease present or not</option>
+    <option value="1">yes</option>
+    <option value="0">no</option>
+  </select><br>
+
+
+  </select><br>
+  
+</select><br>
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+       
+    </body>
+</html>
